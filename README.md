@@ -36,4 +36,9 @@ Release the click to launch the red circle;
 Try to collect all the coins and destroy all green circle enemies to complete the level;
 Avoid hitting the red squares to not get destroyed.
 
+## Reusability
+
+This project is using the A1 - Level Editor to create the levels to load into the game.
+[LevelEditor] (https://github.com/PG29Vinicius/A1-Level-Editor)
+[SuperMadFlyingCreatures] (https://github.com/PG29Vinicius/A2-Game)
 Made by © Vinicius Januzzi - VFS - 2025/2026 - JavaScript WebApps - Term 2
