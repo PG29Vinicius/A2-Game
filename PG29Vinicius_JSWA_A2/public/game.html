@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="gameStyle.css" />
+    <title>SuperMadFlyingCreatures</title>
+</head>
+<body>
+    <header>
+        <h1>SuperMadFlyingCreatures</h1>
+        <label>
+            Level:
+            <select id="level-select">
+                <option>Loading...</option>
+            </select>
+        </label>
+        <button id="load-level-btn">Load Level</button>
+    </header>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <footer>
+        <p>&copy; 2025 Do not steal.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/planck-js/1.4.2/planck.min.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
