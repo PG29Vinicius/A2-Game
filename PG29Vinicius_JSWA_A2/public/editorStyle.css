@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+    header h1 {
+        margin-bottom: 10px;
+    }
+
+main {
+    display: flex;
+    height: calc(100vh - 120px);
+    gap: 10px;
+    padding: 10px;
+}
+
+#left-panel {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: auto;
+}
+
+.panel {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+    .panel h2 {
+        font-size: 16px;
+        margin-bottom: 12px;
+        color: #333;
+    }
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input[type="range"] {
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: #ddd;
+    outline: none;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.button-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    button.danger {
+        background-color: #f44336;
+    }
+
+        button.danger:hover {
+            background-color: #da190b;
+        }
+
+    button.btn-block {
+        background-color: #8B8B8B;
+    }
+
+        button.btn-block:hover {
+            background-color: #6B6B6B;
+        }
+
+    button.btn-catapult {
+        background-color: #FF9800;
+    }
+
+        button.btn-catapult:hover {
+            background-color: #E68900;
+        }
+
+    button.btn-enemy {
+        background-color: #f44336;
+    }
+
+        button.btn-enemy:hover {
+            background-color: #da190b;
+        }
+
+    button.btn-spike {
+        background-color: #000;
+    }
+
+        button.btn-spike:hover {
+            background-color: #333;
+        }
+
+    button.btn-coin {
+        background-color: #FFD700;
+        color: #333;
+    }
+
+        button.btn-coin:hover {
+            background-color: #FFC700;
+        }
+
+#editor-panel {
+    flex: 1;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+    #editor-panel h2 {
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+#editor {
+    position: relative;
+    width: 2045px;
+    height: 1640px; 
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.hint {
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+}
+
+.element {
+    position: absolute;
+    cursor: move;
+    border: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    user-select: none;
+}
+
+/* Block styling */
+.type-block {
+    background-color: #8B8B8B;
+    color: white;
+    font-size: 12px;
+}
+
+/* Catapult styling */
+.type-catapult {
+    background-color: #FF9800;
+    color: white;
+    font-size: 11px;
+    border-radius: 4px;
+}
+
+/* Enemy styling */
+.type-enemy {
+    background-color: #f44336;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    border-color: #d32f2f;
+}
+
+/* Spike styling */
+.type-spike {
+    background-color: #000;
+    color: white;
+    font-size: 12px;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    border: none;
+}
+
+/* Coin styling */
+.type-coin {
+    background-color: #FFD700;
+    color: #333;
+    font-size: 12px;
+    border-radius: 50%;
+    border-color: #FFA500;
+}
+
+.ui-draggable-dragging {
+    opacity: 0.9;
+    z-index: 1000;
+}

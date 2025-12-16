@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>public</title>
+    <link rel="stylesheet" href="editorStyle.css" />
+</head>
+<body>
+    <header>
+        <h1>Crazy Mad Flying Animals</h1>
+        <p>Cool game that's totally not ripped off :).</p>
+    </header>
+
+    <main>
+        <section id="left-panel">
+            <div class="panel">
+                <h2>Level Info</h2>
+                <label>
+                    Level ID:
+                    <input type="text" id="level-id" placeholder="999" />
+                </label>
+
+                <div class="button-row">
+                    <button id="save-level">Save</button>
+                    <button id="load-level">Load</button>
+                    <button id="delete-level" class="danger">Delete</button>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h2>Add Elements</h2>
+                <div class="button-row">
+                    <button id="add-block" class="btn-block">Block</button>
+                    <button id="add-catapult" class="btn-catapult">Catapult</button>
+                    <button id="add-enemy" class="btn-enemy">Enemy</button>
+                    <button id="add-spike" class="btn-spike">Spike</button>
+                    <button id="add-coin" class="btn-coin">Coin</button>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h2>Block Size</h2>
+                <label>
+                    Width: <span id="width-value">60</span>px
+                    <input type="range" id="block-width" min="20" max="2000" value="60" />
+                </label>
+                <label>
+                    Height: <span id="height-value">20</span>px
+                    <input type="range" id="block-height" min="10" max="1000" value="20" />
+                </label>
+            </div>
+        </section>
+
+        <section id="editor-panel">
+            <h2>Level Canvas</h2>
+            <div id="editor"></div>
+            <p class="hint">Right-click to delete an element. Drag elements with your mouse.</p>
+        </section>
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script src="editor.js"></script>
+</body>
+</html>
